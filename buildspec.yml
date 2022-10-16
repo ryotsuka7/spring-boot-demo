@@ -10,7 +10,6 @@ phases:
       # OS情報の確認
       - cat /etc/system-release
       - cat /etc/os-release
-      - codebuild-breakpoint
       # 各種パッケージの最新化
       - yum update -y
       # タイムゾーンの変更
