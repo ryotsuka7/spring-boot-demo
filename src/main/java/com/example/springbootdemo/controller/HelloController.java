@@ -13,7 +13,7 @@ public class HelloController {
     public Sample hello(){
         Sample sample = new Sample();
         sample.setId(100);
-        sample.setName("taro");
+        sample.setName("tarojiro");
 
         return  sample;
     }

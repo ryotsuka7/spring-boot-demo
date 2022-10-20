@@ -18,8 +18,8 @@ permissions:
     type:
       - file
 
-#hooks:
-#  ApplicationStart:
-#    - location: scripts/restart.sh
-#      timeout: 300
-#      runas: root
+hooks:
+  ApplicationStart:
+    - location: scripts/spring-boot-demo-restart.sh
+      timeout: 300
+      runas: root
