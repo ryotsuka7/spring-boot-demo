@@ -4,7 +4,8 @@ files:
   - source: /
     destination: /home/ec2-user/app/
 permissions:
-  - object: /home/ec2-user/app
+  - object: /home/ec2-user
+    pattern: "app"
     owner: ec2-user
     group: ec2-user
     type:
