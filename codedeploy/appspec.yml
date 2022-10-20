@@ -17,9 +17,8 @@ permissions:
     mode: 444
     type:
       - file
-
 hooks:
   ApplicationStart:
-    - location: scripts/spring-boot-demo-restart.sh
+    - location: spring-boot-demo-restart.sh
       timeout: 300
       runas: root
