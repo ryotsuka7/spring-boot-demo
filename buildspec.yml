@@ -50,6 +50,8 @@ phases:
       # S3にアップロードするファイルを所定のディレクトリにコピー
       - mkdir artifacts
       - cp target/spring-boot-demo-0.0.1-SNAPSHOT.jar artifacts
+      - cp codedeploy/appspec.yml artifacts
+      - cp codedeploy/spring-boot-demo-restart.sh artifacts
 
       - echo finish post build.
 
@@ -57,5 +59,7 @@ artifacts:
   # S3にアップロードするファイルを指定
   files:
     - spring-boot-demo-0.0.1-SNAPSHOT.jar
+    - appspec.yml
+    - spring-boot-demo-restart.sh
   # ベースディレクトリ
   base-directory: artifacts
