@@ -1,6 +1,8 @@
 package com.example.springbootdemo;
 
+import com.example.springbootdemo.dto.ItemResponse;
 import com.example.springbootdemo.dto.Sample;
+import com.example.springbootdemo.entity.Item;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +24,11 @@ class SpringBootDemoApplicationTests {
 	@Autowired
 	private MockMvc mockMvc;
 	@Test
-	void contextLoads() throws  Exception{
-		// JavaのObjectをJSONに変換するためのクラスを生成
+	void testHello() throws  Exception{
+        // 検証するAPIパス
+        final String API_PATH = "/hello";
+
+        // JavaのObjectをJSONに変換するためのクラスを生成
 		ObjectMapper objectMapper = new ObjectMapper();
 
 		// 結果を検証するためのクラスを生成して、期待値をセット
@@ -32,9 +37,30 @@ class SpringBootDemoApplicationTests {
 		sample.setName("taro");
 
 		// 「/hello」パスのAPIを実行してレスポンスを検証
-		this.mockMvc.perform(MockMvcRequestBuilders.get("/hello"))
+		this.mockMvc.perform(MockMvcRequestBuilders.get(API_PATH))
 				.andDo(MockMvcResultHandlers.print())
 				.andExpect(status().isOk())
 				.andExpect(content().json(objectMapper.writeValueAsString(sample)));
 	}
+
+    @Test
+    void testGetItemById() throws Exception {
+        // 検証するAPIパス
+        final String API_PATH = "/item/1";
+
+        // JavaのObjectをJSONに変換するためのクラスを生成
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        // 結果を検証するためのクラスを生成して、期待値をセット
+        ItemResponse itemResponse = new ItemResponse();
+        itemResponse.setId(1);
+        itemResponse.setItemName("大豆");
+
+        // APIを実行してレスポンスを検証
+        this.mockMvc.perform(MockMvcRequestBuilders.get(API_PATH))
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(status().isOk())
+                .andExpect(content().json(objectMapper.writeValueAsString(itemResponse)));
+    }
+
 }
