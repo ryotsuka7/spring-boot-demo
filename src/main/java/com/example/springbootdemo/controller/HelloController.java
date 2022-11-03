@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @GetMapping
-    public Sample hello(){
+    public Sample hello() {
         Sample sample = new Sample();
         sample.setId(100);
         sample.setName("taro");
 
-        return  sample;
+        return sample;
     }
 }
