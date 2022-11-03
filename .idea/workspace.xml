@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e7c26be-4ae1-4f41-8eea-ac5881efa1a8" name="Changes" comment="schema.sqlに記述していたinsert文をdata.sqlに変更">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/springbootdemo/dto/ItemRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings/intellij-java-google-style.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootdemo/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/springbootdemo/controller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootdemo/mapper/ItemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/springbootdemo/mapper/ItemMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootdemo/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/springbootdemo/controller/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/springbootdemo/mapper/ItemMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/springbootdemo/mapper/ItemMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/springbootdemo/SpringBootDemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/springbootdemo/SpringBootDemoApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +22,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -41,13 +40,16 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="dev-db-access02" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProjectId" id="2FiE2Q9pXM9gzncdcFBwU6i9Xjy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -59,11 +61,13 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "code.cleanup.on.save": "true",
     "last_opened_file_path": "/Users/ryotsuka/IdeaProjects/spring-boot-demo/src/main/resources",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "File.Encoding"
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "actions.on.save"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -105,10 +109,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SpringBootDemoApplication" />
-        <item itemvalue="JUnit.SpringBootDemoApplicationTests" />
         <item itemvalue="JUnit.SpringBootDemoApplicationTests" />
         <item itemvalue="Application.SpringBootDemoApplication" />
+        <item itemvalue="Application.SpringBootDemoApplication" />
+        <item itemvalue="JUnit.SpringBootDemoApplicationTests" />
         <item itemvalue="JUnit.SpringBootDemoApplicationTests" />
       </list>
     </recent_temporary>
