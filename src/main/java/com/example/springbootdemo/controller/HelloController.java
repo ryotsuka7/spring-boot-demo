@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 public class HelloController {
 
-  @GetMapping
-  public Sample hello() {
-    Sample sample = new Sample();
-    sample.setId(100);
-    sample.setName("taro");
+    @GetMapping
+    public Sample hello() {
+        Sample sample = new Sample();
+        sample.setId(100);
+        sample.setName("taro");
 
-    return sample;
-  }
+        return sample;
+    }
 }
