@@ -1,2 +1,2 @@
-insert into item (id, item_name) values (1, '大豆');
-insert into item (id, item_name) values (2, '小豆');
+INSERT INTO item (item_name) VALUES ('大豆');
+INSERT INTO item (item_name) VALUES ('小豆');
