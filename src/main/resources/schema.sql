@@ -1,10 +1,7 @@
-drop table if exists item;
+DROP TABLE IF EXISTS item;
 
-create table item (
-  id integer,
-  item_name varchar(20),
-  primary key(id)
+CREATE TABLE item (
+  id INTEGER NOT NULL AUTO_INCREMENT,
+  item_name VARCHAR(20),
+  PRIMARY KEY(id)
 );
-
-insert into item (id, item_name) values (1, '大豆');
-insert into item (id, item_name) values (2, '小豆');
