@@ -9,6 +9,7 @@ import java.util.List;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -56,6 +57,7 @@ public class ItemController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
+    @Transactional
     public ItemResponse doPost(@RequestBody ItemRequest itemRequest) {
         Item item = new Item();
         BeanUtils.copyProperties(itemRequest, item);
@@ -70,6 +72,7 @@ public class ItemController {
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
+    @Transactional
     public ItemResponse doPut(@PathVariable int id, @RequestBody ItemRequest itemRequest) {
         Item item = new Item();
         BeanUtils.copyProperties(itemRequest, item);
@@ -84,6 +87,7 @@ public class ItemController {
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
+    @Transactional
     public void doDelete(@PathVariable int id) {
         boolean ret = itemMapper.delete(id);
     }
