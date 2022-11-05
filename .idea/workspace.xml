@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e7c26be-4ae1-4f41-8eea-ac5881efa1a8" name="Changes" comment="フォーマット">
+    <list default="true" id="6e7c26be-4ae1-4f41-8eea-ac5881efa1a8" name="Changes" comment="MyBatisのgenerator用に最低限のコミット">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/springbootdemo/controller/MyBatisGeneratorDemoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/springbootdemo/controller/MyBatisGeneratorDemoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootdemo/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/springbootdemo/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootdemo/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/springbootdemo/controller/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/springbootdemo/SpringBootDemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/springbootdemo/SpringBootDemoApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +41,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev-db-access02" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,28 +58,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ryotsuka/IdeaProjects/spring-boot-demo/src/main/resources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/ryotsuka/IdeaProjects/spring-boot-demo/src/main/resources",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "actions.on.save"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.springbootdemo.controller" />
       <recent name="com.example.springbootdemo.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SpringBootDemoApplication">
+  <component name="RunManager" selected="JUnit.SpringBootDemoApplicationTests">
     <configuration name="SpringBootDemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.springbootdemo.SpringBootDemoApplication" />
       <module name="spring-boot-demo" />
@@ -106,10 +107,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="mybatis-generator" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="mybatis-generator:generate" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.SpringBootDemoApplication" />
+      <item itemvalue="JUnit.SpringBootDemoApplicationTests" />
+      <item itemvalue="Maven.mybatis-generator" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SpringBootDemoApplication" />
         <item itemvalue="JUnit.SpringBootDemoApplicationTests" />
+        <item itemvalue="Application.SpringBootDemoApplication" />
         <item itemvalue="Application.SpringBootDemoApplication" />
         <item itemvalue="JUnit.SpringBootDemoApplicationTests" />
         <item itemvalue="JUnit.SpringBootDemoApplicationTests" />
@@ -272,7 +303,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667490429487</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="APIとテストメソッドにトランザクション管理を追加。">
+      <created>1667561005348</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1667561005348</updated>
+    </task>
+    <task id="LOCAL-00023" summary="MyBatisのgenerator用に最低限のコミット">
+      <created>1667658942713</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1667658942714</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -284,6 +329,17 @@
               <option name="CUSTOM_BOOLEAN_PROPERTIES">
                 <map>
                   <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="dev-db-access4" />
+                      </list>
+                    </value>
+                  </entry>
                 </map>
               </option>
             </State>
@@ -311,6 +367,8 @@
     <MESSAGE value="DBからPK値を指定してデータを取得するAPIを追加。" />
     <MESSAGE value="schema.sqlに記述していたinsert文をdata.sqlに変更" />
     <MESSAGE value="フォーマット" />
-    <option name="LAST_COMMIT_MESSAGE" value="フォーマット" />
+    <MESSAGE value="APIとテストメソッドにトランザクション管理を追加。" />
+    <MESSAGE value="MyBatisのgenerator用に最低限のコミット" />
+    <option name="LAST_COMMIT_MESSAGE" value="MyBatisのgenerator用に最低限のコミット" />
   </component>
 </project>
