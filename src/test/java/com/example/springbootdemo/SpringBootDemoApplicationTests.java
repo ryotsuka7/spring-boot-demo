@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -26,6 +27,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @SpringBootTest
 @AutoConfigureMockMvc
+@Transactional
 class SpringBootDemoApplicationTests {
 
     // APIを発行するためのMockオブジェクトを生成
@@ -53,7 +55,7 @@ class SpringBootDemoApplicationTests {
     }
 
     @Test
-    @Transactional
+    @Sql("/init-sequence.sql")
     void testCrud() throws Exception {
         // select(idは1)
         /**
@@ -88,6 +90,7 @@ class SpringBootDemoApplicationTests {
 
         // 期待値を設定
         itemResponse = new ItemResponse();
+        // TODO: id=3を前提とするのはNG。登録する処理が先に実行されるとAUTO_INCREMENTが進み、ここの検証でNGとなるため。
         itemResponse.setId(3);
         itemResponse.setItemName("コーヒー豆");
 
@@ -198,5 +201,16 @@ class SpringBootDemoApplicationTests {
             new TypeReference<List<ItemResponse>>() {
             });
         assertThat(itemResponseList, hasSize(2));
+    }
+
+    @Test
+    void test0MyBatisGenerator() throws Exception {
+        // 検証するAPIパス
+        final String API_PATH = "/demo";
+
+        // APIを実行してレスポンスを検証
+        this.mockMvc.perform(MockMvcRequestBuilders.get(API_PATH))
+            .andDo(MockMvcResultHandlers.print())
+            .andExpect(status().isOk());
     }
 }

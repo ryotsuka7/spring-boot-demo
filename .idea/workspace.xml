@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e7c26be-4ae1-4f41-8eea-ac5881efa1a8" name="Changes" comment="フォーマット">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootdemo/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/springbootdemo/controller/ItemController.java" afterDir="false" />
+    <list default="true" id="6e7c26be-4ae1-4f41-8eea-ac5881efa1a8" name="Changes" comment="テストメソッド開始時にAUTO_INCREMENT項目のシーケンスを初期化">
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/springbootdemo/SpringBootDemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/springbootdemo/SpringBootDemoApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +37,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev-db-access02" />
+        <entry key="$PROJECT_DIR$" value="db-unit-test01" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -77,7 +75,7 @@
       <recent name="com.example.springbootdemo.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SpringBootDemoApplication">
+  <component name="RunManager" selected="JUnit.SpringBootDemoApplicationTests">
     <configuration name="SpringBootDemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.springbootdemo.SpringBootDemoApplication" />
       <module name="spring-boot-demo" />
@@ -106,10 +104,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.SpringBootDemoApplication" />
+      <item itemvalue="JUnit.SpringBootDemoApplicationTests" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SpringBootDemoApplication" />
         <item itemvalue="JUnit.SpringBootDemoApplicationTests" />
+        <item itemvalue="Application.SpringBootDemoApplication" />
         <item itemvalue="Application.SpringBootDemoApplication" />
         <item itemvalue="JUnit.SpringBootDemoApplicationTests" />
         <item itemvalue="JUnit.SpringBootDemoApplicationTests" />
@@ -272,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667490429487</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="テストメソッド開始時にAUTO_INCREMENT項目のシーケンスを初期化">
+      <created>1668270493078</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1668270493078</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -311,6 +320,7 @@
     <MESSAGE value="DBからPK値を指定してデータを取得するAPIを追加。" />
     <MESSAGE value="schema.sqlに記述していたinsert文をdata.sqlに変更" />
     <MESSAGE value="フォーマット" />
-    <option name="LAST_COMMIT_MESSAGE" value="フォーマット" />
+    <MESSAGE value="テストメソッド開始時にAUTO_INCREMENT項目のシーケンスを初期化" />
+    <option name="LAST_COMMIT_MESSAGE" value="テストメソッド開始時にAUTO_INCREMENT項目のシーケンスを初期化" />
   </component>
 </project>
