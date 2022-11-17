@@ -1,11 +1,13 @@
 package com.example.springbootdemo.controller;
 
+import com.example.springbootdemo.advice.NotFoundException;
 import com.example.springbootdemo.dto.ItemRequest;
 import com.example.springbootdemo.dto.ItemResponse;
 import com.example.springbootdemo.entity.Item;
 import com.example.springbootdemo.mapper.ItemMapper;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,6 +35,10 @@ public class ItemController {
         // DBからidをキーにデータを取得
         Item item = itemMapper.findById(id);
 
+        // 0件の場合は例外とする
+        if (Objects.isNull(item)) {
+            throw new NotFoundException(0, "No record found for id.");
+        }
         // Responseにデータをコピーしてreturn
         ItemResponse itemResponse = new ItemResponse();
         BeanUtils.copyProperties(item, itemResponse);
