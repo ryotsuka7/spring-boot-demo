@@ -5,6 +5,7 @@ import com.example.springbootdemo.dto.ItemRequest;
 import com.example.springbootdemo.dto.ItemResponse;
 import com.example.springbootdemo.entity.Item;
 import com.example.springbootdemo.mapper.ItemMapper;
+import com.example.springbootdemo.messages.ErrorMessage;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -37,7 +38,7 @@ public class ItemController {
 
         // 0件の場合は例外とする
         if (Objects.isNull(item)) {
-            throw new NotFoundException(0, "No record found for id.");
+            throw new NotFoundException(ErrorMessage.NOT_FOUND, "id=" + id);
         }
         // Responseにデータをコピーしてreturn
         ItemResponse itemResponse = new ItemResponse();
